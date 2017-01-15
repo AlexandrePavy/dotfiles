@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Global aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias aptup='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get autoremove && sudo apt-get autoclean'
+
+# Docker aliases
+alias dc=docker-compose

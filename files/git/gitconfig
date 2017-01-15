@@ -1,0 +1,40 @@
+[user]
+	name = Alexandre PAVY
+	email = alexandre@pavy.org
+	signingkey = 3C9A13FE
+[color]
+	ui = true
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+[alias]
+	lg = log --graph --pretty=custom
+    amend = commit --amend
+[pretty]
+	custom = %Cgreen%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+    #                │                    │         |          │                  └─ author name
+    #                │                    │         |          └─ date (relative)
+	#                |                    |         └─ message
+    #                │                    └─ decorations (branch, heads or tags)
+    #                └─ hash (abbreviated)
+
+[commit]
+	# all commits be GPG signed
+	gpgsign = true
+[rerere]
+	# Activate recording of resolved conflicts, so that identical conflict hunks can be resolved automatically, should they be encountered again.
+	enabled = true
+[status]
+	# enable --short by default
+	short = true
+[push]
+	# push the current branch to update a branch with the same name on the receiving end when "git push"
+	default = current
+	# enable '--follow-tags' option by default
+	followTags = true
+[pull]
+	# rebase branches on top of the fetched branch, instead	of merging the default branch from the default remote when "git pull"
+	rebase = true
+[include]
+	# Load local configs.
+	path = ~/.gitconfig.local
